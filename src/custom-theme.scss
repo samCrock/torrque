@@ -1,0 +1,68 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+// Generic
+$big-font: 2rem;
+$mid-font: 1.6rem;
+$small-font: 1.2rem;
+
+$mat-custom-green: (
+50 : #eef6f5,
+100: #d5e9e6,
+200: #b9dad5,
+300: #9ccbc4,
+400: #87bfb8,
+500: #72b4ab,
+600: #6aada4,
+700: #5fa49a,
+800: #559c91,
+900: #428c80,
+A100: #e3fffa,
+A200: #b0fff2,
+A400: #7dffe9,
+A700: #63ffe5,
+contrast: (
+50: $black-87-opacity,
+100: $black-87-opacity,
+200: $black-87-opacity,
+300: $black-87-opacity,
+400: $black-87-opacity,
+500: white,
+600: white,
+700: white,
+800: $white-87-opacity,
+900: $white-87-opacity,
+A100: $black-87-opacity,
+A200: white,
+A400: white,
+A700: white,
+)
+);
+
+$candy-app-primary: mat-palette($mat-custom-green);
+$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$candy-app-warn:    mat-palette($mat-red);
+
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+// $font-family: 'Dosis, monospace',
+// $font-family: 'Open Sans Condensed, sans-serif',
+$custom-typography: mat-typography-config(
+  $font-family: 'Assistant, sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(20px, 26px, 500)
+);
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+
+
+
+@include angular-material-theme($candy-app-theme);
