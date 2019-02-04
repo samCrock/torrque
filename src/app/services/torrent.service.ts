@@ -8,7 +8,10 @@ import { environment } from '../../environments/environment';
 
 @Injectable()
 export class TorrentService {
-  baseUrl = environment.production ? 'https://thepiratebay10.org/search/' : 'http://localhost:1337/https://thepiratebay10.org/search/';
+  private proxyurl = 'https://cors-anywhere.herokuapp.com/';
+  baseUrl = environment.production ? this.proxyurl + 'https://thepiratebay10.org/search/' :
+  this.proxyurl + 'https://thepiratebay10.org/search/';
+
   public genericResult$: EventEmitter<any>;
 
   constructor(private http: HttpClient) {
