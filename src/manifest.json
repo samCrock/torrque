@@ -3,7 +3,7 @@
   "name": "Torrque",
   "description": "Torrent search wrapper",
   "version": "1",
-  "author": "Jake Prins",
+  "author": "Sam Lombardi",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "browser_action": {
     "default_icon": "assets/torrque.png",
