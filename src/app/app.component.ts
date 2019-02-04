@@ -29,7 +29,7 @@ export class AppComponent implements AfterViewInit {
   cache: CacheInterface;
 
 
-  constructor(private torrentService: TorrentService, private cdRef: ChangeDetectorRef) { }
+  constructor(private torrentService: TorrentService, private cdRef: ChangeDetectorRef) {}
 
 
   ngAfterViewInit() {
@@ -46,6 +46,7 @@ export class AppComponent implements AfterViewInit {
       this.syncResults = this.cache.results;
       this.cdRef.detectChanges();
     }
+
   }
 
   search() {
