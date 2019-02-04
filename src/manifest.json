@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Torrque",
-  "description": "The most popular movies and TV shows in your   default tab. Includes ratings, summaries and the ability to watch trailers.",
+  "description": "Torrent search wrapper",
   "version": "1",
   "author": "Jake Prins",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
