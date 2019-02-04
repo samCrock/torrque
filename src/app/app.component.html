@@ -30,7 +30,7 @@
   </div>
   <div class="results-body" *ngFor="let result of syncResults">
     <div fxLayout="row" fxLayoutAlign="start space-evenly">
-      <label fxFlex="80">{{ result.name }}</label>
+      <label fxFlex="80" class="larger">{{ result.name | slice:0:120 }}</label>
       <div class="centered verified-container" fxFlex="5">
         <mat-icon class="fa fa-check small" *ngIf="result.verified"></mat-icon>
       </div>
