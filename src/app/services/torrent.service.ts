@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
 export class TorrentService {
   private proxyurl = 'https://cors-anywhere.herokuapp.com/';
   baseUrl = environment.production ? this.proxyurl + 'https://thepiratebay10.org/search/' :
-  this.proxyurl + 'https://thepiratebay10.org/search/';
+    this.proxyurl + 'https://thepiratebay10.org/search/';
 
   public genericResult$: EventEmitter<any>;
 
@@ -18,7 +18,7 @@ export class TorrentService {
     this.genericResult$ = new EventEmitter();
   }
 
-  search(searchString: string): Observable<Object> {
+  search(searchString: string): Observable<any> {
     // let result = {};
     return this.searchGeneric(searchString)
       .pipe(
@@ -28,7 +28,7 @@ export class TorrentService {
         }));
   }
 
-  searchGeneric(searchString: string): Observable<Object[]> {
+  searchGeneric(searchString: string): Observable<any[]> {
     return this.http.get(this.baseUrl + '/s/?q=' + searchString + '&page=0&orderby=99', { responseType: 'text' })
       .pipe(
         map(response => {

@@ -31,7 +31,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/background.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,7 +89,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/background.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

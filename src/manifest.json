@@ -30,6 +30,12 @@
     }
   ],
   "permissions": [
-    "activeTab"
-  ]
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.cors-anywhere.herokuapp.com/"
+  ],
+  "background": {
+    "scripts": ["scripts.js"]
+}
 }
