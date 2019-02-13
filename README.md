@@ -4,10 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Chrome Extension Mode
 
+* Clone or download this repo and extract
 * Open in a new tab `chrome://extensions/`  
 * Turn **Developer Mode** on  
 * Click on **Load unpacked**  
-* Select `[INSTALLATION_PATH]\dist\torrque`  
+* Select `[DOWNLOAD_FOLDER]\dist\torrque`  
 * Turn **Developer Mode** off  
 
 
