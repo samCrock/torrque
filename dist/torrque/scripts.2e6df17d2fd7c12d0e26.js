@@ -1,0 +1,1 @@
+chrome.webRequest.onBeforeSendHeaders.addListener(function(e){return console.log("details.requestHeaders",e.requestHeaders),e.requestHeaders.push({name:"Origin",value:"http://localhost"}),{requestHeaders:e.requestHeaders}},{urls:["<all_urls>"]},["blocking","requestHeaders"]);
