@@ -1,4 +1,5 @@
-chrome.webRequest.onBeforeSendHeaders.addListener(
+if (chrome) {
+  chrome.webRequest.onBeforeSendHeaders.addListener(
   function (details) {
     console.log('details.requestHeaders', details.requestHeaders);
     details.requestHeaders.push({
@@ -9,3 +10,4 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
       requestHeaders: details.requestHeaders
     };
   }, { urls: ["<all_urls>"] }, ["blocking", "requestHeaders"]);
+}
