@@ -1,15 +1,12 @@
 // Import theming functions
 @import '~@angular/material/theming';
-// Import your custom theme
+// Custom theme
 @import 'src/custom-theme.scss';
 
 #logo {
-    // font-family: 'Bowlby One SC', cursive;
-    // -webkit-text-stroke: 2px mat-color($candy-app-primary);
     text-shadow: 0 0 , 0 4px mat-color($candy-app-primary), 4px 4px 0 mat-color($candy-app-primary), 0 -1px mat-color($candy-app-primary);
     font-size: 3rem;
     font-weight: 800;
-    // padding-top: 1rem;
     z-index: 1;
     position: absolute;
     right: 1rem;
@@ -34,7 +31,6 @@
         display: block;
     }
     mat-icon {
-        // padding-top: .4rem;
         font-size: $mid-font;
         margin: auto;
         display: inline;
@@ -71,6 +67,7 @@
 .clickable {
   cursor: pointer;
 }
+
 
 // TYPOGRAPHY
 
