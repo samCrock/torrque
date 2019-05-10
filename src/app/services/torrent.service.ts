@@ -1,5 +1,5 @@
 
-import { throwError as observableThrowError, Observable } from 'rxjs';
+import { throwError as observableThrowError, Observable, of } from 'rxjs';
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { switchMap, map } from 'rxjs/operators';
@@ -22,7 +22,7 @@ export class TorrentService {
     // let result = {};
     return this.searchGeneric(searchString)
       .pipe(
-        switchMap((genericResult) => {
+        switchMap(genericResult => {
           console.log('genericResult', genericResult);
           return genericResult;
         }));
@@ -47,6 +47,10 @@ export class TorrentService {
               link,
               verified
             });
+          }
+          console.log('result', result);
+          if (result.length === 0) {
+            throw observableThrowError('No results');
           }
           return result;
         }, error => {

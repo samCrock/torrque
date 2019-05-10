@@ -3,36 +3,25 @@ $break-small: 600px;
 $break-large: 1500px;
 
 
-mat-form-field {
-    width: 100%;
-}
-
-.mat-form-field-flex {
-    width: calc(100% - 15rem) !important;
-}
-
 mat-card {
-    // max-width: 80vw !important;
     box-shadow: none !important;
     margin: auto;
-    // margin-top: 2rem;
-    // margin-bottom: 2rem;
-    // @media screen and (max-width: $break-small) {
-    //     max-width: 95vw !important;
-    //     float: none;
-    // }
-    // @media screen and (min-width: $break-large) {
-    //     max-width: 60vw !important;
-    //     float: none;
-    // }
 }
 
 .mat-input-element {
+    position: absolute;
+    float: left;
     font-size: 2rem !important;
     padding: .5rem !important;
     color: mat-contrast($candy-app-primary, 800) !important;
     background: mat-color($candy-app-primary, 300) !important;
 }
+
+.mat-toolbar .mat-input-element {
+    border: none;
+}
+
+input:focus {outline:0;}
 
 mat-icon {
     color: mat-color($candy-app-primary);
@@ -52,7 +41,7 @@ mat-icon {
     font-size: $mid-font !important;
 }
 
-.mat-form-field-underline {
+.mat-input-element-underline {
     display: none !important;
 }
 .mat-focused{

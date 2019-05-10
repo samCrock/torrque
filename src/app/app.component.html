@@ -2,9 +2,9 @@
   <mat-toolbar-row>
     <span id="logo">Torrque</span>
     <span class="spacer"></span>
-    <mat-form-field>
+    <!-- <mat-form-field> -->
       <input matInput (keyup.enter)="search()" [(ngModel)]="searchString" placeholder="" appAutofocus />
-    </mat-form-field>
+    <!-- </mat-form-field> -->
   </mat-toolbar-row>
 </mat-toolbar>
 <div class="progress-container">
@@ -40,11 +40,11 @@
       </label>
     </div>
   </div>
-  <div class="warning" *ngIf="noResults">
-    <label>No results</label>
-  </div>
 
+</mat-card>
 
+<mat-card *ngIf="noResults" fxLayout="column" fxLayoutAlign="center center">
+  <label class="warning">No results</label>
 </mat-card>
 
 <router-outlet></router-outlet>
