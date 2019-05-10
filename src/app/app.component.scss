@@ -13,8 +13,8 @@
   right: 1rem;
 }
 
-.spacer {
-  flex: 1 1 auto;
+#main-input {
+  width: calc(100% - 220px);
 }
 
 .progress-container {
